@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<WelcomeComponent Name="Brandon" UpdateParentEvent="Update"/>
+
+@if (show)
+{
+    <div>Updated</div>
+}
+
+@code{
+    bool show = false;
+
+    public void Update()
+    {
+        show = true;
+    }
+}

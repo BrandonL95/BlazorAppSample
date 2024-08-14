@@ -1,0 +1,17 @@
+﻿
+
+<h1>Welcome @Name</h1>
+<button @onclick="UpdateParent">Update Parent</button>
+
+@code{
+    [Parameter]
+    public string Name { get; set; }
+
+    [Parameter]
+    public EventCallback UpdateParentEvent { get; set; }
+
+    public void UpdateParent()
+    {
+        UpdateParentEvent.InvokeAsync();
+    }
+}
